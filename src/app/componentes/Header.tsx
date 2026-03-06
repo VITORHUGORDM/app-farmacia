@@ -2,7 +2,6 @@ import { Menu } from "lucide-react-native";
 import React from "react";
 import {
   Image,
-  ImageSourcePropType,
   Platform,
   StatusBar,
   StyleSheet,
@@ -11,19 +10,19 @@ import {
   View,
 } from "react-native";
 import { Colors } from "../componentes/Colors";
+import { HeaderProps } from "../interfaces/Interface";
 
-interface HeaderProps {
-  title?: string;
-  image?: ImageSourcePropType;
-}
-
-export function Header({ title, image }: HeaderProps) {
+export function Header(prop: HeaderProps) {
   return (
     <View style={styles.header}>
-      {image ? (
-        <Image source={image} style={styles.logoImage} resizeMode="contain" />
+      {prop.logoImage ? (
+        <Image
+          source={{ uri: prop.logoImage }}
+          style={styles.logoImage}
+          resizeMode="contain"
+        />
       ) : (
-        <Text style={styles.logoText}>{title || "IESGO"}</Text>
+        <Text style={styles.logoText}>{prop.title || "IESGO"}</Text>
       )}
       <TouchableOpacity style={styles.menuButton} onPress={() => null}>
         <Menu size={28} color={Colors.white} />
