@@ -1,9 +1,5 @@
-import { Text, View } from "react-native";
+import { Header } from "./componentes/Header";
 
 export default function App() {
-  return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
-  );
+  return <Header title="Farmácia IESGO" />;
 }
