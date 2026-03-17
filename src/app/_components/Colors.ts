@@ -9,3 +9,5 @@ export const Colors = {
   danger: "#EF4444", // vermelho para negativos status
   border: "#E5E7EB", // bordas
 };
+
+export default Colors;

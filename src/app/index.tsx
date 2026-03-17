@@ -1,5 +1,5 @@
-import { Header } from "./componentes/Header";
+import { Redirect } from "expo-router";
 
-export default function App() {
-  return <Header title="Farmácia IESGO" />;
+export default function Index() {
+  return <Redirect href={"/login" as any} />;
 }
