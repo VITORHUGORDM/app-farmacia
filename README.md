@@ -38,7 +38,7 @@ npx expo start (ou npm run start)
 
 Estrutura do Projeto
 
-📦 app-IesgoSemPijama
+📦 app-farmacia
 
 ┣ 📂 assets/ # Arquivos estáticos (imagens, fontes, etc.)
 
