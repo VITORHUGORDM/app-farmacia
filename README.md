@@ -1,6 +1,6 @@
 WebApp de Farmacia
 
-Este projeto é um aplicativo web desenvolvido com Next.js e TypeScript, destinado a um evento que sera feito na iesgo.
+Este projeto é um aplicativo web desenvolvido com React native e TypeScript, destinado ao curso de farmacia.
 
 Repositório Git
 
