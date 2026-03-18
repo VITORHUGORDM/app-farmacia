@@ -6,7 +6,6 @@ import {
   Pill,
   Stethoscope,
   Users,
-  X,
 } from "lucide-react-native";
 import React from "react";
 import {
@@ -109,12 +108,9 @@ export default function Navbar({ visible, onClose }: NavbarProps) {
         {/* Header do Sidebar */}
         <View style={styles.sidebarHeader}>
           <Image
-            source={require("../../../assets/images/logo-iesgo.png")}
+            source={require("../../../assets/images/logo-iesgobranca.png")}
             style={styles.logoImage}
           />
-          <TouchableOpacity onPress={onClose} style={styles.closeButton}>
-            <X size={24} color={Colors.white} />
-          </TouchableOpacity>
         </View>
 
         {/* Menu Items */}

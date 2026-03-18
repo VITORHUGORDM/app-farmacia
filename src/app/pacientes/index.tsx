@@ -49,7 +49,7 @@ export default function PacientesScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header title="IESGO" />
+      <Header />
 
       <View style={styles.content}>
         <View style={styles.pageHeader}>

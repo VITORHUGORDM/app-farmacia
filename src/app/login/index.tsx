@@ -36,17 +36,16 @@ export default function LoginScreen() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.keyboardView}
       >
-        <View style={styles.logoContainer}>
-          {/* Logo IESGO */}
-          <Image
-            source={require("../../../assets/images/logo-iesgo.png")}
-            style={styles.logoIesgo}
-            resizeMode="contain"
-          />
-          <Text style={styles.subtitle}>SISTEMA DE FARMÁCIA</Text>
-        </View>
-
         <View style={styles.formContainer}>
+          <View style={styles.logoContainer}>
+            {/* Logo IESGO */}
+            <Image
+              source={require("../../../assets/images/logo-iesgo.png")}
+              style={styles.logoIesgo}
+              resizeMode="contain"
+            />
+            <Text style={styles.subtitle}>FARMÁCIA</Text>
+          </View>
           <Text style={styles.welcomeText}>Bem-vindo!</Text>
           <Text style={styles.instructionText}>
             Faça login para acessar o painel
@@ -141,7 +140,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: Colors.textSecondary,
     fontWeight: "600",
-    marginTop: 4,
+    marginTop: 0,
   },
   formContainer: {
     backgroundColor: Colors.white,
@@ -231,9 +230,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   logoIesgo: {
-    width: 250,
+    width: 200,
     height: 80,
-    marginBottom: 10,
+    marginBottom: 0,
+    marginTop: 0,
   },
   logoLads: {
     width: 160,

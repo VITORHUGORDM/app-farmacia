@@ -59,16 +59,15 @@ export default function RegisterScreen() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.keyboardView}
       >
-        <View style={styles.logoContainer}>
-          <Image
-            source={require("../../../assets/images/logo-iesgo.png")}
-            style={styles.logoIesgo}
-            resizeMode="contain"
-          />
-          <Text style={styles.subtitle}>SISTEMA DE FARMÁCIA</Text>
-        </View>
-
         <View style={styles.formContainer}>
+          <View style={styles.logoContainer}>
+            <Image
+              source={require("../../../assets/images/logo-iesgo.png")}
+              style={styles.logoIesgo}
+              resizeMode="contain"
+            />
+            <Text style={styles.subtitle}>FARMÁCIA</Text>
+          </View>
           <Text style={styles.welcomeText}>Crie sua conta</Text>
           <Text style={styles.instructionText}>
             Preencha os dados para se cadastrar
@@ -190,7 +189,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 18,
     color: Colors.textSecondary,
     fontWeight: "600",
     marginTop: 4,
@@ -212,7 +211,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     color: Colors.text,
-    marginBottom: 8,
+    marginBottom: 6,
   },
   instructionText: {
     fontSize: 14,
@@ -274,14 +273,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   logoIesgo: {
-    width: 250,
-    height: 80,
-    marginBottom: 10,
+    width: 200,
+    height: 50,
+    marginBottom: 0,
+    marginTop: 0,
   },
   logoLads: {
     width: 160,
     height: 60,
     marginBottom: 10,
-    marginTop: 20,
+    marginTop: 10,
   },
 });

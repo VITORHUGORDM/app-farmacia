@@ -6,7 +6,6 @@ import {
   Platform,
   StatusBar,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -28,9 +27,7 @@ export default function Header({ title, image, onMenuPress }: HeaderProps) {
     <View style={styles.header}>
       {image ? (
         <Image source={image} style={styles.logoImage} resizeMode="contain" />
-      ) : (
-        <Text style={styles.logoText}>{title || "IESGO"}</Text>
-      )}
+      ) : null}
       <TouchableOpacity style={styles.menuButton} onPress={handleMenu}>
         <Menu size={28} color={Colors.white} />
       </TouchableOpacity>
@@ -67,5 +64,6 @@ const styles = StyleSheet.create({
   menuButton: {
     padding: 8,
     marginRight: -8,
+    marginLeft: "auto",
   },
 });

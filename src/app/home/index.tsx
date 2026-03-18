@@ -72,7 +72,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header image={require("../../../assets/images/logo-iesgo.png")} />
+      <Header image={require("../../../assets/images/logo-iesgobranca.png")} />
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}

@@ -11,8 +11,8 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../_components/Colors";
-import { FormInput } from "../_components/FormInput";
-import { Header } from "../_components/Header";
+import FormInput from "../_components/FormInput";
+import Header from "../_components/Header";
 import { useApp } from "../_interfaces/AppContext";
 
 export default function EditarMedicamentoScreen() {
@@ -63,7 +63,7 @@ export default function EditarMedicamentoScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header title="IESGO" />
+      <Header />
 
       <ScrollView
         contentContainerStyle={styles.scrollContent}

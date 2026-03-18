@@ -101,7 +101,7 @@ export default function EditarPacienteScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header title="IESGO" />
+      <Header />
 
       <ScrollView
         contentContainerStyle={styles.scrollContent}

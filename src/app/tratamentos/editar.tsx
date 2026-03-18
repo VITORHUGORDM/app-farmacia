@@ -172,7 +172,7 @@ export default function EditarTratamentoScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header title="IESGO" />
+      <Header />
 
       <ScrollView
         contentContainerStyle={styles.scrollContent}
