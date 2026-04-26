@@ -45,6 +45,23 @@ const formatarData = (valor: string) => {
 const validarEmail = (valor: string) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
 
+const validarCpf = (valor: string): boolean => {
+  const numeros = valor.replace(/\D/g, "");
+  if (numeros.length !== 11 || /^(\d)\1{10}$/.test(numeros)) return false;
+
+  const calcDigito = (base: string, pesoInicial: number) => {
+    const soma = base
+      .split("")
+      .reduce((acc, d, i) => acc + parseInt(d) * (pesoInicial - i), 0);
+    const resto = soma % 11;
+    return resto < 2 ? 0 : 11 - resto;
+  };
+
+  const d1 = calcDigito(numeros.slice(0, 9), 10);
+  const d2 = calcDigito(numeros.slice(0, 10), 11);
+  return d1 === parseInt(numeros[9]) && d2 === parseInt(numeros[10]);
+};
+
 export default function EditarPacienteScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams();
@@ -78,6 +95,11 @@ export default function EditarPacienteScreen() {
   const handleAtualizar = () => {
     if (!nome || !cpf || !dataNascimento) {
       Alert.alert("Erro", "Preencha pelo menos Nome, CPF e Data de Nascimento");
+      return;
+    }
+
+    if (!validarCpf(cpf)) {
+      Alert.alert("Erro", "CPF inválido. Verifique o número digitado.");
       return;
     }
 
